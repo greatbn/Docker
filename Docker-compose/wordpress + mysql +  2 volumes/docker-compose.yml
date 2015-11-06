@@ -1,0 +1,25 @@
+web:
+ image: richarvey/nginx-php-fpm
+ ports:
+  - "80:80"
+ links:
+  - database
+ volumes_from:
+  - web_data
+database:
+ image: centurylink/mysql
+ volumes_from:
+  - db_data
+ environment:
+  - MYSQL_ROOT_PASSWORD=saphi123
+  - MYSQL_DATABASE=wordpress
+  - MYSQL_USER=saphi
+  - MYSQL_PASSWORD=saphi123
+db_data:
+ image: busybox:latest
+ volumes:
+  - ./database:/var/lib/mysql
+web_data:
+ image: busybox:latest
+ volumes:
+  - ./source:/usr/share/nginx/html
