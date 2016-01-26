@@ -5,8 +5,9 @@ Và bản Windows server 2016 TP 4 đang được MS cho dùng thử Link downlo
 Vì đây chưa phải là phiên bản chính thức nên Có nhiều tính năng của docker chưa được hỗ trợ (docker-compose, docker-swarm, docker-machine) và cũng chưa có nhiều images được phát triển
 ###Chuẩn bị
 
-Một máy đã cài Windows Server 2016
-Internet
+- Một máy đã cài Windows Server 2016
+
+- Internet
 
 ###Cài đặt
 
