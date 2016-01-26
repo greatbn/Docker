@@ -4,8 +4,6 @@ web:
   - "8080:80"
  links:
   - database
- volumes:
-  - ./web:/usr/share/nginx/html
 database:
  image: centurylink/mysql
  environment:
