@@ -13,6 +13,7 @@ Internet
 ####Step 1: Cài đặt Docker
 
 Mở Windows Power Shell download script cài đặt của MS
+
 `wget -uri http://aka.ms/setupcontainers -OutFile C:\SetupContainer.ps1`
 
 Chạy Script
