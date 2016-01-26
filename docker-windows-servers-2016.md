@@ -35,13 +35,15 @@ Sau đó sẽ tự động download image base windowscore tại http://aka.ms/C
 *Note: Việc download khá lâu mình phải mất 1 tiếp mới có thể download được nó. Các bạn kiên nhẫn chờ đợi nhé*
 
 
+<img src="http://i.imgur.com/RbHSLcC.png">
 
 ####Step 3: Kiểm tra
 
 Sau khi hoàn thành ta có thể kiểm tra version của docker bằng command
-docker version
 
+`docker version`
 
+<img src="http://i.imgur.com/HzYgcPJ.png">
 
 ####Step 4 Tạo images chạy Webserver IIS
 
