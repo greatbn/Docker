@@ -71,7 +71,7 @@ Mở windows PowerShell chạy lệnh sau
 
 Tạo file index.html tại thư mục C:\test\
 
-<h3> Docker on Windows Server </h3>
+`<h3> Docker on Windows Server </h3>`
 Kiểm tra
 
 `wget localhost:8080`
