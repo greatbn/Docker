@@ -72,6 +72,9 @@ Mở windows PowerShell chạy lệnh sau
 Tạo file index.html tại thư mục C:\test\
 
 `<h3> Docker on Windows Server </h3>`
-Kiểm tra
 
-`wget localhost:8080`
+Kiểm tra mở trình duyệt và gõ địa chỉ sau
+
+`IP_winserver:8080/websitedemo/index.html`
+
+<img src="http://i.imgur.com/WjXXpmF.png">
