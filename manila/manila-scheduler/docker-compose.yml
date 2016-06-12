@@ -1,0 +1,18 @@
+version: "2"
+services:
+  manila-scheduler:
+    image: saphi/manila-scheduler:mitaka
+    environment:
+      MANILA_DBUSER: "manila"
+      MANILA_DBPASS: "Welcome123"
+      DB_IP_ADDR: "10.0.0.21"
+      MANILA_DBNAME: "manila"
+      CONTROLLER_ADDR: "10.0.0.21"
+      RABBIT_USERID: "openstack"
+      RABBIT_PASS: "Welcome123"
+      PROJECT_DOMAIN_NAME: "default"
+      USER_DOMAIN_NAME: "default"
+      PROJECT_NAME: "service"
+      USER_MANILA: "manila"
+      MANILA_PASS: "Welcome123"
+    entrypoint: ["/home/manila/entrypoint.sh"]
