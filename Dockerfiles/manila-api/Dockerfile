@@ -8,6 +8,8 @@ RUN apk add --update python py-pip  python-dev build-base git gcc musl-dev libxm
 #clone source code
 WORKDIR /home
 RUN git clone https://github.com/openstack/manila.git -b stable/mitaka
+WORKDIR /home/manila
+RUN git checkout 296c9955edae4f25b5b120ff5df7ccd1569984d6
 
 #install python library
 WORKDIR /home/manila
