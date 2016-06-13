@@ -27,7 +27,7 @@ RUN chmod a+x /home/manila/config.sh /home/manila/entrypoint.sh
 
 WORKDIR /home/manila/
 #start config
-CMD ["/home/manila/config.sh"]
+CMD ["./config.sh"]
 #start service manila-api
 WORKDIR /home/manila/
-ENTRYPOINT ["/home/manila/entrypoint.sh"]
+ENTRYPOINT ["./entrypoint.sh"]
