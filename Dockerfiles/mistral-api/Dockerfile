@@ -19,7 +19,8 @@ RUN mkdir /etc/mistral && cp -R etc/* /etc/mistral
 COPY mistral.conf /etc/mistral/
 RUN python setup.py install
 WORKDIR /home/mistral
-RUN cp -r mistral/resources /usr/lib/python2.7/dist-packages/mistral/
+RUN cp -r mistral/resources /usr/lib/python2.7/dist-packages/mistral && \
+  cp mistral/actions/openstack/mapping.json /usr/lib/python2.7/site-packages/mistral/actions/openstack
 
 #copy config script
 COPY config.sh entrypoint.sh /home/mistral/
