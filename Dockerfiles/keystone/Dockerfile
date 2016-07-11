@@ -22,7 +22,10 @@ COPY config.sh entrypoint.sh /home/
 RUN chmod a+x /home/*
 
 RUN rm -r /home/keystone
-RUN apt-get remove -y git python-pip && apt-get -y autoremove && apt-get clean
+RUN ln -sf /proc/self/fd/1 /var/log/apache2/access.log && \
+    ln -sf /proc/self/fd/1 /var/log/apache2/error.log && \
+    ln -sf /proc/self/fd/1 /var/log/apache2/keystone_access.log && \
+    ln -sf /proc/self/fd/1 /var/log/apache2/keystone.log
 EXPOSE 5000
 EXPOSE 35357
 ENTRYPOINT ["/home/entrypoint.sh"]
