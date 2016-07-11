@@ -1,5 +1,5 @@
 FROM ubuntu:16.04
-RUN apt-get install -y python python-pip python-dev python3-dev libxml2-dev libxslt1-dev \
+RUN apt-get update && apt-get upgrade -y && apt-get install -y python python-pip python-dev python3-dev libxml2-dev libxslt1-dev \
     libsasl2-dev libsqlite3-dev libssl-dev libldap2-dev libffi-dev apache2 libapache2-mod-wsgi
 
 RUN pip install pymysql
