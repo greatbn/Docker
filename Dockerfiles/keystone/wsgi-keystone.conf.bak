@@ -4,14 +4,14 @@ Listen 35357
 <VirtualHost *:5000>
     WSGIDaemonProcess keystone-public processes=5 threads=1 user=keystone group=keystone display-name=%{GROUP}
     WSGIProcessGroup keystone-public
-    WSGIScriptAlias / /usr/local/bin/keystone-wsgi-public
+    WSGIScriptAlias / /usr/bin/keystone-wsgi-public
     WSGIApplicationGroup %{GLOBAL}
     WSGIPassAuthorization On
     ErrorLogFormat "%{cu}t %M"
     ErrorLog /var/log/apache2/keystone.log
     CustomLog /var/log/apache2/keystone_access.log combined
 
-    <Directory /usr/local/bin>
+    <Directory /usr/bin>
         Require all granted
     </Directory>
 </VirtualHost>
@@ -19,14 +19,14 @@ Listen 35357
 <VirtualHost *:35357>
     WSGIDaemonProcess keystone-admin processes=5 threads=1 user=keystone group=keystone display-name=%{GROUP}
     WSGIProcessGroup keystone-admin
-    WSGIScriptAlias / /usr/local/bin/keystone-wsgi-admin
+    WSGIScriptAlias / /usr/bin/keystone-wsgi-admin
     WSGIApplicationGroup %{GLOBAL}
     WSGIPassAuthorization On
     ErrorLogFormat "%{cu}t %M"
     ErrorLog /var/log/apache2/keystone.log
     CustomLog /var/log/apache2/keystone_access.log combined
 
-    <Directory /usr/local/bin>
+    <Directory /usr/bin>
         Require all granted
     </Directory>
 </VirtualHost>
