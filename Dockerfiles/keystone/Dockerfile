@@ -4,7 +4,8 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y python python-pip
 
 RUN pip install pymysql
 
-clone source code
+#clone source code
+RUN apt-get install -y git
 WORKDIR /home
 RUN git clone https://github.com/openstack/keystone.git -b stable/mitaka
 
@@ -15,7 +16,7 @@ RUN pip install .
 RUN mkdir /etc/keystone && cp -R etc/logging.conf.sample /etc/keystone/logging.conf && \
     cp etc/keystone-paste.ini etc/policy.json etc/default_catalog.templates /etc/keystone/
 COPY keystone.conf /etc/keystone/
-RUN cp httpd/wsgi-keystone.conf /etc/apache2/conf.d/
+COPY wsgi-keystone.conf /etc/apache2/sites-enabled/
 
 COPY config.sh entrypoint.sh /home/
 RUN chmod a+x /home/*
