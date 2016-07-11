@@ -1,0 +1,16 @@
+version: "2"
+services:
+  keystone:
+    image: saphi/keystone
+    environment:
+      ADMIN_TOKEN: "Welcome123"
+      KEYSTONE_DBUSER: "keystone"
+      KEYSTONE_DBPASS: "Welcome123"
+      KEYSTONE_DBADDR: "10.0.0.21"
+      KEYSTONE_DBNAME: "keystone"
+      CONTROLLER_ADDR: "10.0.0.21"
+      KEYSTONE_USER: "keystone"
+      KEYSTONE_PASS: "Welcome123"
+    ports:
+      - 35357:35357
+      - 5000:5000
